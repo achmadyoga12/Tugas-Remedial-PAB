@@ -20,7 +20,7 @@ class _SplashPageState extends State<SplashPage> {
       if (isLogin) {
         Navigator.pushReplacementNamed(context, '/home');
       } else {
-        Navigator.pushReplacementNamed(context, '/login');
+        Navigator.pushReplacementNamed(context, '/register');
       }
     });
   }
