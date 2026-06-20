@@ -13,6 +13,7 @@ class _RegisterPageState extends State<RegisterPage> {
   final namaC = TextEditingController();
   final emailC = TextEditingController();
   final passwordC = TextEditingController();
+  final instaC = TextEditingController();
 
   Future register() async {
     UserCredential userCredential = await FirebaseAuth.instance
@@ -27,7 +28,7 @@ class _RegisterPageState extends State<RegisterPage> {
         .set({
           "nama": namaC.text,
           "email": emailC.text,
-          "instagram": "@spacenews",
+          "instagram": instaC.text,
           "photo": "https://i.pravatar.cc/300",
         });
 
@@ -60,6 +61,11 @@ class _RegisterPageState extends State<RegisterPage> {
               controller: passwordC,
               obscureText: true,
               decoration: const InputDecoration(labelText: "Password"),
+            ),
+
+            TextField(
+              controller: instaC,
+              decoration: const InputDecoration(labelText: "Instagram"),
             ),
 
             const SizedBox(height: 20),
