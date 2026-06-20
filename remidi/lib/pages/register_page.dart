@@ -44,7 +44,7 @@ class _RegisterPageState extends State<RegisterPage> {
         padding: const EdgeInsets.all(20),
         child: Column(
           children: [
-            Image.asset("assets/logo.png", height: 120),
+            Image.asset("assets/logo.jpg", height: 120),
 
             TextField(
               controller: namaC,
