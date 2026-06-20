@@ -35,7 +35,7 @@ class _ProfilePageState extends State<ProfilePage> {
 
     if (!mounted) return;
 
-    Navigator.pushNamedAndRemoveUntil(context, '/register', (route) => false);
+    Navigator.pushNamedAndRemoveUntil(context, '/login', (route) => false);
   }
 
   @override
@@ -51,10 +51,7 @@ class _ProfilePageState extends State<ProfilePage> {
     }
 
     return Scaffold(
-      appBar: AppBar(
-        title: const Text("Profile"),
-        elevation: 0,
-      ),
+      appBar: AppBar(title: const Text("Profile"), elevation: 0),
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(20),
         child: Column(
@@ -103,7 +100,10 @@ class _ProfilePageState extends State<ProfilePage> {
                 child: Column(
                   children: [
                     ListTile(
-                      leading: const Icon(Icons.email, color: Color(0xff0F172A)),
+                      leading: const Icon(
+                        Icons.email,
+                        color: Color(0xff0F172A),
+                      ),
                       title: const Text(
                         "Email",
                         style: TextStyle(color: Colors.grey, fontSize: 13),
@@ -119,7 +119,10 @@ class _ProfilePageState extends State<ProfilePage> {
                     ),
                     const Divider(indent: 70, height: 1),
                     ListTile(
-                      leading: const Icon(Icons.camera_alt, color: Color(0xff0F172A)),
+                      leading: const Icon(
+                        Icons.camera_alt,
+                        color: Color(0xff0F172A),
+                      ),
                       title: const Text(
                         "Instagram",
                         style: TextStyle(color: Colors.grey, fontSize: 13),
@@ -154,10 +157,7 @@ class _ProfilePageState extends State<ProfilePage> {
                 icon: const Icon(Icons.logout),
                 label: const Text(
                   "Logout",
-                  style: TextStyle(
-                    fontSize: 16,
-                    fontWeight: FontWeight.bold,
-                  ),
+                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
                 ),
               ),
             ),
